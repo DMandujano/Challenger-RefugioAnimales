@@ -64,12 +64,5 @@ public class RefAnimal {
 
 
 
-
-        
-        System.out.print("Enter the name of the animal: ");
-        String name = sc.nextLine();
-        System.out.print("Enter the age of the animal: ");
-        int age = sc.nextInt(); 
-
     }
 }
