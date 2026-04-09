@@ -87,7 +87,14 @@ public class RefAnimal {
                 case 3 -> {//felipe
                     System.out.print("Ingresa el ID del animal a marcar como adoptado: ");
                     int idAnimal = sc.nextInt();
-
+                    if (idAnimal < 1 || idAnimal > contadorAnimales) {
+                        System.out.println("Error: ID inválido.");
+                    } else if (estados[idAnimal - 1].equalsIgnoreCase("Adoptado")) {
+                        System.out.println("Error: El animal ya está adoptado.");
+                    } else {
+                        estados[idAnimal - 1] = "Adoptado";
+                        System.out.println("Animal marcado como adoptado.");
+                    }
                 }
                 case 4 -> {//Allan
                     System.out.println("Animales disponibles:");
